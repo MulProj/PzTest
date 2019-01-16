@@ -1,0 +1,133 @@
+<div class="row">
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3"> 
+                      <h3>Czujniki temperatury</h3>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                            <div class="huge">13</div>
+                            <div>Twoje czujniki</div>
+                    </div>
+                </div>
+            </div>
+                <div class="panel-footer">
+                    <form role="form">
+                            <br style="clear:both">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="name" placeholder="Nazwa czujnika" [(ngModel)]="tempName"  required>
+                                </div> 
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="number" placeholder="Temperatura maksymalna" [(ngModel)]="tempMaxValue"  required>
+                                </div> 
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="number" placeholder="Temperatura minimalna"[(ngModel)]="tempMinValue"  required>
+                                </div> 
+                            <br/>
+                         <button type="button" class="btn btn-primary" (click)="addTempSensor()">Dodaj czujnik</button> 
+                    </form>      
+                </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-green">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                     <h3>Czujniki ruchu</h3>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">13</div>
+                         <div>Twoje czujniki</div>
+                    </div>
+                </div>
+            </div>
+            
+                <div class="panel-footer">
+                    <form role="form">
+                        <br style="clear:both">
+                          <div class="form-group">
+                            <input type="text" class="form-control" name="name" placeholder="Nazwa czujnika" [(ngModel)]="motionName"  required>
+                          </div> 
+                        <br/>
+                        <button type="button" class="btn btn-success" (click)="addMotionSensor()">Dodaj czujnik</button> 
+                </form>
+                </div>
+            
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-yellow">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <h3>Czujniki dymu</h3>
+                        
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="huge">13</div>
+                        <div>Twoje czujniki</div>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="panel-footer">
+                <form role="form">
+                    <br style="clear:both">
+                      <div class="form-group">
+                        <input type="text" class="form-control" name="name" placeholder="Nazwa czujnika" [(ngModel)]="smokeName"  required>
+                      </div> 
+                      <div class="form-group">
+                        <input type="text" class="form-control" name="number" placeholder="Wartość maksymalna" [(ngModel)]="smokeMinValue"  required>
+                      </div> 
+                      <div class="form-group">
+                        <input type="text" class="form-control" name="number" placeholder="Wartość minimalna" [(ngModel)]="smokeMaxValue" required>
+                      </div> 
+                    <br/>
+                    <button type="button" class="btn btn-warning" (click)="addSmokeSensor()">Dodaj czujnik</button> 
+            </form>
+            </div>   
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-red">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <h3>Czujniki wilgotności</h3>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                            <div class="huge">13</div>
+                            <div>Twoje czujniki</div>
+                    </div>
+                </div>
+            </div>
+         
+                <div class="panel-footer">
+                    <form role="form">
+                        <br style="clear:both">
+                          <div class="form-group">
+                            <input type="text" class="form-control" name="name" placeholder="Nazwa czujnika" [(ngModel)]="humidityName"  required>
+                          </div> 
+                          <div class="form-group">
+                            <input type="number" class="form-control" name="max" placeholder="Wartość maksymalna" [(ngModel)]="humidityMaxValue"  required>
+                          </div> 
+                          <div class="form-group">
+                            <input type="number" class="form-control" name="min" placeholder="Wartość minimalna" [(ngModel)]="humidityMinValue" required>
+                          </div> 
+                        <br/>
+                        <button type="button" class="btn btn-danger" (click)="addHumiditySensor()">Dodaj czujniki</button> 
+                </form>
+                </div>
+            
+        </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <app-sensors-layout [houseId]="houseId" [plan]="plan" [newSensor]="newSensor"></app-sensors-layout>

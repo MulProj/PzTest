@@ -1,0 +1,30 @@
+<div *ngIf="stan ==null"></div>
+<div *ngIf="stan ==1" class="alert alert-success" role="alert">
+  Pomyślnie dodano dom
+</div>
+<div *ngIf="stan ==2" class="alert alert-danger" role="alert">
+  Dom nie został dodany. Spróbuj ponownie
+</div>
+
+<form role="form">
+  <br style="clear:both">
+      <h3 style="margin-bottom: 25px; text-align: center;">Dodaj mieszkanie</h3>
+    <div class="form-group">
+      <input type="text" class="form-control" #postCode name="name" placeholder="Kod pocztowy" (input)="s_postCode($event)" required>
+      <input type="text" class="form-control" #town name="name" placeholder="Miejscowość" (input)="s_town($event)" required>
+      <input type="text" class="form-control" #street name="name" placeholder="Ulica" (input)="s_street($event)" required>
+      <input type="text" class="form-control" #houseNumber name="name" placeholder="Nr budynku" (input)="s_houseNumber($event)" required>
+      <input type="text" class="form-control" #description name="name" placeholder="Opis mieszkania" (input)="s_description($event)" required>
+    </div> 
+
+
+  <h1>Dodaj plan mieszkania</h1>
+  <input #file type="file" multiple (change)="getBase64($event)" />
+  <br/>
+
+
+  <button type="button" class="btn btn-primary" (click)="addHouse()" >Dodaj dom</button> 
+
+</form>
+
+

@@ -1,0 +1,34 @@
+<table class="table">
+<thead>
+  <tr>
+    <th scope="col">Lp.</th>
+    <th scope="col">Nazwa</th>
+    <th scope="col">Wartość minimalna</th>
+    <th scope="col">Wartość obecna</th>
+    <th scope="col">Wartość maksymalna</th>
+    <th scope="col">Opis</th>
+    <th scope="col">flaga</th>
+  </tr>
+</thead>
+<tbody *ngFor="let p of sensors; index as i">
+    <tr>
+        <td>{{i+1}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.minValue}}</td>
+        <td>{{p.temperature | number: '1.1-2'}}</td>
+        <td>{{p.maxValue}}</td>
+        <td>{{p.description}}</td>
+        <td>{{p.isOn}}</td>
+        <td>
+    </td>
+
+</tbody>
+
+
+
+</table >
+
+
+
+
+
